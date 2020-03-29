@@ -1,4 +1,5 @@
-Vivecraft-autolauncher
+# Vivecraft-autolauncher
+
 It's a simple AutoHotKey script which launches the Minecraft Launcher and automatically clicks on the Play button.
 
 At the first launch of the program, it will ask you where your Minecraft launcher is located.
