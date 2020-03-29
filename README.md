@@ -21,8 +21,6 @@ Installation: https://github.com/Mavi222/Vivecraft-autolauncher/wiki/Installatio
 TO-DO: I need to clean the script of the unnecessary, not working lines. Right now it works but the code is really bad. I also could make the script to ask you if you use the new or the old launcher so it's backwards compatible.
 
 # Vivecraft Autolauncher Remake
-This is a remake of the Vivecraft Autolauncher
-
-His Version is a simple AutoHotKey script which launches the Minecraft Launcher and automatically clicks on the Play button.
+Version 0.4 is a remake of the Vivecraft Autolauncher by Marvin1099
 
 This version will search for a given name to start the profile you want.
