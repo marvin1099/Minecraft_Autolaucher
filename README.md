@@ -21,7 +21,7 @@ After the first time setup this happens:
 # Download Section
 
 Download the newest Version there:
-	https://github.com/marvin1099/Vivecraft-autolauncher/releases
+	https://github.com/marvin1099/Minecraft_Autolaucher/releases
 Extract the Vivecraft-autolauncher-0.5.zip
 Run the Minecraft_Autolauncher.exe
 
