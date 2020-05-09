@@ -1,19 +1,19 @@
 # Minecraft_Autolauncher -- *Vivecraft_Autolauncher Rewritten*
-Based on a script by Mavi222.
+Based on a script by Mavi222.	
 
-But i basically rewrote the whole thing.
+But i basically rewrote the whole thing.	
 
 	Rewritten by Marivn1099.
 	
 
-This is autolaucher super convenient because you can launch if directly from SteamVR without taking the headset off.
+This is autolaucher super convenient because you can launch if directly from SteamVR without taking the headset off.	
 
-There are probably some unnecessary lines, 
+There are probably some unnecessary lines, 	
 
-but i think ist fine you can look at it yourself its inside the AKH folder.
+but i think ist fine you can look at it yourself its inside the AKH folder.	
 
 
-After the first time setup this happens:
+After the first time setup this happens:	
 
 	1. Launches the Minecraft launcher
 	
