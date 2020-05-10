@@ -60,6 +60,7 @@ and ask you again (questions below).
 
 
 
+
 If you run it first time it test for a older config file.	
 
 The config file name is location.txt 	
@@ -71,6 +72,7 @@ it will ask you to delete that or stop the script.
 If you want to run that script please click ok to delete it.	
 
 If you never had used this Launcher not you wont see that at all.	
+
 
 
 
@@ -89,6 +91,7 @@ If it doesn't ask you it will show a file selection Just select the Minecraft La
 If you want to select a Minecraft Lanucher in a another path click chancel,	
 
 and select the Minecraft Lanucher you want to use.	
+
 
 
 
@@ -115,6 +118,7 @@ the easyest way to open this folder is by opining minecraft, the options, textur
 clicking on the open texturenpack folder, going one back on the opened File Explorer,	
 
 and double clicking on the version folder.	
+
 
 
 
@@ -146,6 +150,7 @@ the down option is from last to first instead.
 
 
 
+
 If you selected name(yes), or date(no) it will ask you for your minecraft version folder,	
 
 as i said it will ask if the the default folder is the correct one.	
@@ -160,11 +165,14 @@ or just browse to your Minercraft Version Folder.
 
 
 
+
 In the next and last box it will ask you to imput how long the programm waits for the Minecraft Lanucher.	
 
 If to short it will click on nothing because the Minecraft Launcher isn't useable jet.
 
 The default (2 Sec) shod work.	
+
+
 
 
 Every setting is theoretically editable inside the %insert here name of Auto Launcher%.ini.	
