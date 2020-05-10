@@ -145,7 +145,7 @@ the name(yes) option wil sort by name and the date(no) option wil sort by date.
 
 its based on your next opition if it sorts up or down up means,		
 
--- -- -- -  first to last 1.14.4, 1.13.2, 1.12,	
+-- -- -- --  first to last 1.14.4, 1.13.2, 1.12,	
 	     
 jjjj.mm.dd   first to last 2020.03.10, 2020.03.09, 2020.03.08,	
 
