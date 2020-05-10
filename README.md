@@ -106,3 +106,12 @@ if not select the correct one like this.
 type like this "C:\Users\%Username%\AppData\Roaming\.minecraft\versions".	
 replace the %Username% with your PC Username,	
 or just browse to your Minercraft Version Folder.	
+
+
+In the next and last box it will ask you to imput how long the programm waits for the Minecraft Lanucher.	
+If to short it will click on nothing because the Minecraft Launcher isn't useable jet.
+The default (2 Sec) shod work.	
+
+Every setting is theoretically editable inside the %insert here name of Auto Launcher%.ini.	
+If you want you can do it but i won't explain wat ist wat you can try some stuff,	
+or just delete the %insert here name of Auto Launcher%.ini file it will give you all questions again.
