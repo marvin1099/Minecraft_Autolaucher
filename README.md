@@ -70,7 +70,7 @@ If you want to select a Minecraft Lanucher in a another path click chancel,
 and select the Minecraft Lanucher you want to use.	
 
 
-In the next box type the important part of the profile name.	
+In the next box type the important part of the profile name.		
 For example profile name "vivecraft-1.14.4-jrbudda-4-a0",	
 and "vivecraft-1.13.4-jrbudda-3-a0" type "vivecraft",	
 it will start the newer or older version based on you next answers.	
