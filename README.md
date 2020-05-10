@@ -42,6 +42,8 @@ Run the Minecraft_Autolauncher.exe
 
 # Tutorial Section
 
+1.
+
 If you are not that advanced just hit enter to all the Questions.	
 
 I sorted them so you use the best in my opinion		
@@ -59,7 +61,7 @@ if you dont the script will create a new location.txt,
 and ask you again (questions below).	
 
 
-
+2.
 
 If you run it first time it test for a older config file.	
 
@@ -74,7 +76,7 @@ If you want to run that script please click ok to delete it.
 If you never had used this Launcher not you wont see that at all.	
 
 
-
+3.
 
 If you are a advanced user the first option is for setting up your Minecraft Lanucher location,		
 
@@ -93,7 +95,7 @@ If you want to select a Minecraft Lanucher in a another path click chancel,
 and select the Minecraft Lanucher you want to use.	
 
 
-
+4.
 
 In the next box type the important part of the profile name.		
 
@@ -120,7 +122,7 @@ clicking on the open texturenpack folder, going one back on the opened File Expl
 and double clicking on the version folder.	
 
 
-
+5.
 
 The next box shows the in Minecraft Lanucher installation sort opition setting,		
 
@@ -133,6 +135,7 @@ it will just type the name you typed in the last box and sort based on your opio
 if you use the oldsort(cancel) the setup is finished for you	
 
 
+6.
 
 In the new box it will ask you to sort by name(yes), date(no), or oldsort(cancel).	
 
@@ -149,7 +152,7 @@ jjjj.mm.dd   first to last 2020.03.10, 2020.03.09, 2020.03.08,
 the down option is from last to first instead.	
 
 
-
+7.
 
 If you selected name(yes), or date(no) it will ask you for your minecraft version folder,	
 
@@ -164,7 +167,7 @@ replace the %Username% with your PC Username,
 or just browse to your Minercraft Version Folder.	
 
 
-
+8.
 
 In the next and last box it will ask you to imput how long the programm waits for the Minecraft Lanucher.	
 
@@ -173,7 +176,7 @@ If to short it will click on nothing because the Minecraft Launcher isn't useabl
 The default (2 Sec) shod work.	
 
 
-
+9.
 
 Every setting is theoretically editable inside the %insert here name of Auto Launcher%.ini.	
 
