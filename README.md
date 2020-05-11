@@ -1,5 +1,5 @@
 # Minecraft_Autolauncher -- *Vivecraft_Autolauncher Rewritten*
-Based on a script by Mavi222.	
+Based on a script by Mavi222.		
 
 But i basically rewrote the whole thing.	
 
