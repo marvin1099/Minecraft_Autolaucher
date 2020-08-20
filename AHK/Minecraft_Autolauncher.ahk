@@ -1,33 +1,64 @@
+Vers := "v0.7"
+CopVer := "v0.5"
 LineNr := 0
 Select := 0
 Dir := A_WorkingDir
 Loca := ""
+UpdateV := ""
 SplitPath, A_ScriptName,,,, ScriptName
 INIFile := ScriptName ".ini"
+INIFileC := ScriptName "-copy.ini"
 Loop, read, %INIFile%
 {
 	LineNr++
 	Line%LineNr% := A_LoopReadLine
-	if ((LineNr = 1)and((A_LoopReadLine = "v0.5")or(A_LoopReadLine = "v0.6")))
-		LineNr := 1
-	else if (LineNr = 1){
-		Line2Nr := 0
-		MsgBox, 4, Minecraft AutoLaucher, The %INIFile% was not writen for Minecraft AutoLaucher v0.5 or v0.6`nDelete existing file(Yes)`nStop Script(No)
-		IfMsgBox, Yes
+	if(LineNr = 1)
+	{
+		if(SubStr(CopVer, 1, 1)="v") 
+			CopVeri := SubStr(CopVer, 2)
+		if(SubStr(Vers, 1, 1)="v") 
+			Versi := SubStr(Vers, 2)
+		if(SubStr(A_LoopReadLine, 1, 1)="v") 
+			vernum := SubStr(A_LoopReadLine, 2)
+		if((vernum >= CopVeri) and (vernum <= Versi))
 		{
-		Line2Nr := 1
+			LineNr := 1
+			if(vernum != Versi)
+				UpdateV := Vers
 		}
 		else
-			ExitApp	
+		{
+			Line2Nr := 0
+			MsgBox, 4, Minecraft AutoLaucher, The %INIFile% was not writen for Minecraft AutoLaucher %CopVer% to %Vers%`nDelete existing file(Yes)`nStop Script(No)
+			IfMsgBox, Yes
+			{
+				Line2Nr := 1
+			}
+			else
+				ExitApp	
+		}
+	}	
+	if((LineNr = 1)and(UpdateV!=""))
+	{
+		FileDelete, %INIFileC%
+		FileAppend, %UpdateV%, %INIFileC%
 	}
+	else if((LineNr != 1)and(UpdateV!=""))
+		FileAppend, `n%A_LoopReadLine%, %INIFileC%
 }
+if(FileExist(INIFileC))
+{
+	FileCopy, %INIFileC%, %INIFile%, 1
+	FileDelete, %INIFileC%
+}
+
 if (Line2Nr = 1) {
 		FileDelete, %INIFile%
 		LineNr := 0
 		Line2Nr := 0
 }
 if (LineNr = 0) {
-	FileAppend, v0.6, %INIFile%
+	FileAppend, %Vers%, %INIFile%
 	LineNr++
 }
 if (LineNr = 1) {
@@ -81,7 +112,7 @@ if (LineNr = 2) {
 	}
 	emty := 0
 	FileAppend, `n%Profile%, %INIFile%
-	Line3 := %Profile%
+	Line3 := Profile
 	LineNr++
 }
 if (LineNr = 3) {
@@ -130,12 +161,16 @@ if (LineNr = 4) {
 
 if ((LineNr = 4) and (LineOld = False)) {
 	Select := 0
+	SelectAll := 0
 	MineVersions := A_AppData "\.minecraft\versions\*"
 	Msgbox, 4, Minecraft AutoLaucher, Use the default Minecraft Version Folder`n%MineVersions%`nUse it as your Minecraft Version Folder
 	IfMsgBox, Yes
 	{
 		Select := 1
 	}
+	While(SelectAll=0)
+	{
+	MineVersion := ""
 	if (Select = 0) {
 		While (MineVersion = "") {
 			FileSelectFolder, MineVersion, versions, 7, Select the Minecraft versions Folder
@@ -143,7 +178,16 @@ if ((LineNr = 4) and (LineOld = False)) {
 				MsgBox, You didn't select anything, try again.
 		}
 		MineVersion := MineVersion "\*"
-		MineVersions := MineVersion
+		if(MineVersions = "")
+			MineVersions := MineVersion
+		else
+			MineVersions := MineVersions A_Tab MineVersion
+	}
+	MsgBox, 4, Minecraft AutoLaucher, You Want to select more folders
+	IfMsgBox, No
+		SelectAll := 1
+	else
+		Select := 0
 	}
 	Line5 := MineVersions
 	FileAppend, `n%MineVersions%, %INIFile%
@@ -197,86 +241,91 @@ IfWinNotExist, %Minecraftxex%
 	sleep, 100
 }
 sleep, %Line6%
-IfWinNotActive, %Minecraftxex%
+while((!(WinActive(Minecraftxex)))or(Width<900))
 {
 	WinActivate, %Minecraftxex%
-	sleep, 100
-}
-IfWinActive, %Minecraftxex%
+	sleep, 100	
+	if(WinActive(Minecraftxex))
 	WinGetActiveStats, Title, Width, Height, X, Y
-	WPlayB := 260
-	HPlayB := 100
-	WPlay := Width / 2 + 370
-	HPlay := 200
-	WInstall := 340
-	HInstall := 100
-	WSearch := Width / 2 - 80
-	HSearch := 140
-	WSort := Width / 2 + 20
-	HSort := 150
-	WSortName := Width / 2 + 20
-	HSortName := 220
-	WSortPlayed := Width / 2 + 20
-	HSortPlayed := 190
+}
+
+WPlayB := 260
+HPlayB := 100
+WPlay := Width / 2 + 370
+HPlay := 200
+WInstall := 340
+HInstall := 100
+WSearch := Width / 2 - 80
+HSearch := 140
+WSort := Width / 2 + 20
+HSort := 150
+WSortName := Width / 2 + 20
+HSortName := 220
+WSortPlayed := Width / 2 + 20
+HSortPlayed := 190
 	
-	;Variablen Ende
-	;Profiel Starten
+;Variablen Ende
+;Profiel Starten
 	
-	SFile := Line3
-	Loop, parse, Line4, %A_Tab%
+SFile := Line3
+Loop, parse, Line4, %A_Tab%
+{
+		Index%A_Index% := A_LoopField 
+}
+if (Index2 = "Name"){
+	FileList1 := ""
+	R := ""
+	if (Index3 = "SortDown")
+		R := "R"
+	Loop, parse, Line5, %A_Tab%
+	Loop, Files, %A_LoopField%, D
 	{
-			Index%A_Index% := A_LoopField 
+		FileList1 = %FileList1%%A_LoopFileName%`n
 	}
-	if (Index2 = "Name"){
-		FileList1 := ""
-		R := ""
-		if (Index3 = "SortDown")
-			R := "R"
-		Loop, Files, %Line5%, D
-		{
-			FileList1 = %FileList1%%A_LoopFileName%`n
-		}
-		Sort, FileList1 , %R%
-		Loop, Parse, FileList1, `n 
-		{
-		if A_LoopField =
-			continue
-		else if (InStr(A_LoopField, Line3 , CaseSensitive := false, StartingPos := 1, Occurrence := 1))
-			SFile := A_LoopField
-		}
+	Sort, FileList1 , %R%
+	Loop, Parse, FileList1, `n 
+	{
+	if A_LoopField =
+		continue
+	else if (InStr(A_LoopField, Line3 , CaseSensitive := false, StartingPos := 1, Occurrence := 1))
+		SFile := A_LoopField
 	}
-	if (Index2 = "Date"){
-		FileList2 := ""
-		R := ""
-		if (Index3 = "SortDown")
-			R := "R"
-		Loop, Files, %Line5%, D
-		{
-			FileList2 = %FileList2%%A_LoopFileTimeModified%`t%A_LoopFileName%`n
-		}
-		Sort, FileList2 , %R%
-		Loop, Parse, FileList2, `n 
-		{
-		if A_LoopField =
-			continue
-		else if (InStr(A_LoopField, Line3 , CaseSensitive := false, StartingPos := 1, Occurrence := 1))
-			SFile := A_LoopField
-		}
-		StringSplit, FileItem, SFile, %A_Tab%  ; Split into two parts at the tab char.
-		SFile := FileItem2
+}
+if (Index2 = "Date"){
+	FileList2 := ""
+	R := ""
+	if (Index3 = "SortDown")
+		R := "R"
+	Loop, parse, Line5, %A_Tab%
+	Loop, Files, %A_LoopField%, D
+	{
+		FileList2 = %FileList2%%A_LoopFileTimeModified%`t%A_LoopFileName%`n
 	}
+	Sort, FileList2 , %R%
+	Loop, Parse, FileList2, `n 
+	{
+	if A_LoopField =
+		continue
+	else if (InStr(A_LoopField, Line3 , CaseSensitive := false, StartingPos := 1, Occurrence := 1))
+		SFile := A_LoopField
+	}
+	StringSplit, FileItem, SFile, %A_Tab%  ; Split into two parts at the tab char.
+	SFile := FileItem2
+}
 	
-	MouseGetPos, MWidth, MHeight
-	MouseClick, Left, WPlayB, HPlayB, 1, 5
-	MouseClick, Left, WInstall, HInstall, 1, 5
-	MouseClick, Left, WSort, HSort, 1, 5
-	if (Index1 = "Last")
-		MouseClick, Left, WSortPlayed, HSortPlayed, 1, 5
-	else
-		MouseClick, Left, WSortName, HSortName, 1, 5
-	MouseClick, Left, WSearch, HSearch, 1, 5
-	sleep, 50
-	Send, %SFile%
-	sleep, 50
-	MouseClick, Left, WPlay, HPlay, 1, 5
-	MouseMove, MWidth, MHeight
+MouseGetPos, MWidth, MHeight
+MouseClick, Left, WPlayB, HPlayB, 1, 5
+MouseClick, Left, WInstall, HInstall, 1, 5
+ToolTip, Sorting
+ToolTip
+MouseClick, Left, WSort+0, HSort, 1, 5
+if (Index1 = "Last")
+	MouseClick, Left, WSortPlayed, HSortPlayed, 1, 5
+else
+	MouseClick, Left, WSortName, HSortName, 1, 5
+MouseClick, Left, WSearch, HSearch, 1, 5
+sleep, 50
+Send, %SFile%
+sleep, 500
+MouseClick, Left, WPlay, HPlay, 1, 5
+MouseMove, MWidth, MHeight
