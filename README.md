@@ -45,6 +45,8 @@ Run the Minecraft_Autolauncher.exe
 
 1.
 
+Note: You can run infinite instances by copying the script. Basically every script instances has to have a different name.
+
 If you are not that advanced just hit enter to all the Questions.	
 
 Exept if it ask you if you want a extra folder to be included, hit no there.
