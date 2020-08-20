@@ -180,7 +180,7 @@ In the next and last box it will ask you to imput how long the programm waits fo
 
 If to short it will click on nothing because the Minecraft Launcher isn't useable jet.
 
-The default (2 Sec) shod work.	
+The default (2 Sec) shold work.	
 
 
 9.
