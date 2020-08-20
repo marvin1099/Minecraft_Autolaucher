@@ -37,7 +37,7 @@ Download the newest Version there:
 
 	https://github.com/marvin1099/Minecraft_Autolaucher/releases
 	
-Extract the Vivecraft-autolauncher-0.5.zip	
+Extract the Vivecraft-autolauncher-x.x.zip	
 Run the Minecraft_Autolauncher.exe	
 
 # Tutorial Section
