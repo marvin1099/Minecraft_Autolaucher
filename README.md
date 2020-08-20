@@ -47,7 +47,7 @@ Run the Minecraft_Autolauncher.exe
 
 If you are not that advanced just hit enter to all the Questions.	
 
-exept if it ask you if you want a extra folder to be included, hit no there.
+Exept if it ask you if you want a extra folder to be included, hit no there.
 
 I sorted them so you use the best in my opinion		
 
