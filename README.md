@@ -47,6 +47,8 @@ Run the Minecraft_Autolauncher.exe
 
 If you are not that advanced just hit enter to all the Questions.	
 
+exept if it ask you if you want a extra folder to be included, hit no there.
+
 I sorted them so you use the best in my opinion		
 
 If you do that it will start the latest Vivecraft version.	
@@ -166,6 +168,10 @@ type like this "C:\Users\%Username%\AppData\Roaming\.minecraft\versions".
 replace the %Username% with your PC Username,	
 
 or just browse to your Minercraft Version Folder.	
+
+in the newest version it will ask you for more folders.
+
+if you dont want an extra folder to be included hit no.
 
 
 8.
