@@ -109,9 +109,9 @@ If you type the exact name use the name after clicking on the profile,
 
 and copy the version line after the line "release", "snapshot", "old_beta", or "old_alfa"	
 
-Then it will start olny this profile exept,	
+Then it will start this profile,
 
-if there are 2 or more profiles that have the same name but have a longer name.		
+exept if there are 2 or more profiles that have the same name but have a longer name.		
 
 You can also copy the version name fom the minecraft version folder.	
 
@@ -178,8 +178,8 @@ The default (2 Sec) shod work.
 
 9.
 
-Every setting is theoretically editable inside the %insert here name of Auto Launcher%.ini.	
+Every setting is theoretically editable inside the [here script name].ini.	
 
-If you want you can do it but i won't explain wat ist wat you can try some stuff,	
+If you want you can do it but i won't explain what ist what you can try some stuff,	
 
-or just delete the %insert here name of Auto Launcher%.ini file it will give you all questions again.
+or just delete the [here script name].ini file it will give you all questions again.
