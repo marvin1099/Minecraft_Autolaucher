@@ -54,9 +54,9 @@ You only need to answer answer those questions once,
 
 as long as you dont move the file.	
 
-to move the file also move location.txt,	
+to move the file also move [here script name].txt,	
 
-if you dont the script will create a new location.txt,	
+if you dont the script will create a new [here script name].txt,	
 
 and ask you again (questions below).	
 
@@ -65,7 +65,7 @@ and ask you again (questions below).
 
 If you run it first time it test for a older config file.	
 
-The config file name is location.txt 	
+The config file name is [here script name].txt 	
 
 if there is there is a file created in a other version,	
 
