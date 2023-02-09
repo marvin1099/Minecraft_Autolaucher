@@ -7,9 +7,8 @@ Originaly Forked on Github:
 https://github.com/marvin1099/Minecraft_Autolaucher
 	
 
-This is autolaucher super convenient because you can launch if directly from SteamVR without taking the headset off.	
-There are probably some unnecessary lines, 	
-but i think ist fine you can look at it yourself its inside the AKH folder.	
+This is autolaucher super convenient because you can launch it directly from SteamVR without taking the headset off.   	  
+All the code is inside the AHK folder if you like to look at it.
 
 After the first time setup this happens:	
 
