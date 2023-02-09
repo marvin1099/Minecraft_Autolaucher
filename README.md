@@ -35,7 +35,7 @@ After the first time setup this happens:
 
 Download the newest Version there:
 
-	https://github.com/marvin1099/Minecraft_Autolaucher/releases
+	https://codeberg.org/marvin1099/Minecraft_Autolaucher/releases
 	
 Extract the Vivecraft-autolauncher-x.x.zip		
 
