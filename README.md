@@ -1,9 +1,9 @@
 # Minecraft_Autolauncher -- *Vivecraft_Autolauncher Rewritten*
-Forked from a script by Mavi222:	
-https://github.com/Mavi222/Vivecraft-autolauncher
+Forked from a script by Mavi222:	  
+https://github.com/Mavi222/Vivecraft-autolauncher  
 
-But i basically rewrote the whole thing.	
-Originaly Forked on Github:		
+But i basically rewrote the whole thing.	  
+Originaly Forked on Github:		  
 https://github.com/marvin1099/Minecraft_Autolaucher
 	
 
