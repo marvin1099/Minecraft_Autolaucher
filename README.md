@@ -1,7 +1,8 @@
 # Minecraft Autolauncher – *Vivecraft Autolauncher Rewritten*
 
 Original Vivecraft Autolauncher forked from [a script by Mavi222 here](https://github.com/Mavi222/Vivecraft-autolauncher).  
-This is a complete rewrite with more convenience features. Originally forked [here on my GitHub](https://github.com/marvin1099/Minecraft_Autolaucher).
+This is a complete rewrite with more convenience features.  
+Originally forked [here on my GitHub](https://github.com/marvin1099/Minecraft_Autolaucher).
 
 With this autolauncher, you can launch Minecraft directly from SteamVR without removing your headset.  
 
