@@ -349,7 +349,7 @@ class MinecraftRunner:
             time.sleep(0.2)
         x, y = self.calc.abs_coords(mc_buttons.get("Play Instance"))
         pyautogui.moveTo(x, y)
-        #pyautogui.click()
+        pyautogui.click()
         print("Finished minecraft runner")
 
     def execute(self, calc):
@@ -392,4 +392,4 @@ def automate_minecraft(scale=1.0):
 
 if __name__ == "__main__":
     # You can adjust the manual_scale here as needed (e.g., set to 1.5 for 150% scaling)
-    automate_minecraft(scale=1.5)  # Example: 150% scaling
+    automate_minecraft(scale=1.0)
