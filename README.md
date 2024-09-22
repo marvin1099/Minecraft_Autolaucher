@@ -1,194 +1,85 @@
-# Minecraft_Autolauncher -- *Vivecraft_Autolauncher Rewritten*
-Forked from a script by Mavi222:	  
-https://github.com/Mavi222/Vivecraft-autolauncher  
+### README
 
-But i basically rewrote the whole thing.	  
-Originaly Forked on Github:		  
-https://github.com/marvin1099/Minecraft_Autolaucher
-	
+# Minecraft Autolauncher – *Vivecraft Autolauncher Rewritten*
 
-This is autolaucher super convenient because you can launch it directly from SteamVR without taking the headset off.   	  
-All the code is inside the AHK folder if you like to look at it.
+Original Vivecraft Autolauncher forked from [a script by Mavi222 here](https://github.com/Mavi222/Vivecraft-autolauncher).
+This is a complete rewrite with more convenience features. Originally forked [here on my GitHub](https://github.com/marvin1099/Minecraft_Autolaucher).
 
-After the first time setup this happens:	
+With this autolauncher, you can launch Minecraft directly from SteamVR without removing your headset.  
 
-	1. Launches the Minecraft launcher
-	
-	2. Activates the Minecraft launcher window
-	
-	3. Klicks on the play button on the top to clear search bar
-	
-	4. Klicks on the instalations button
-	
-	5. Klicks on the sortby button
-	
-	6. Klicks on the sortlastplayed or sortname botton based on yor choices
-	
-	7. Klicks in the search bar
-	
-	8. Types a profile name or a part of it based on your choises 
-	
-	9. Klicks on the play button on the first result
-	
+Right now this new python version is a beta  
+and some autohotkey features are not implemented in the python version.  
+So there is no compiled version of this jet, so use the py file.
 
-# Download Section
+### Features
 
-Download the newest Version there:
+After initial setup, the following happens automatically:
 
-https://codeberg.org/marvin1099/Minecraft_Autolaucher/releases
-	
-Extract the Vivecraft-autolauncher-x.x.zip		
+1. Launches the Minecraft Launcher.
+2. Activates the Minecraft Launcher window.
+3. Clears the search bar by clicking the Play button.
+4. Navigates to the "Installations" tab.
+5. Searches for the desired profile using the set query.
+6. Launches the first matching profile.
 
-Run the Minecraft_Autolauncher.exe	
+### Download
 
-# Tutorial Section
+You can download the latest version from:  
+[Codeberg PY Download (after clicking on it, click the download symbol on the top right)](https://codeberg.org/marvin1099/Minecraft_Autolaucher/src/branch/python-variant/minecraftautolaucher.py)
 
-1.
+### Dependencies
 
-Note: You can run infinite instances by copying the script. Basically every script instance has to have a different name.
+This project requires the following Python dependencies:
+- `PyAutoGui`
+- `PyWinCtl`
+- `numpy`
 
-If you are not that advanced just hit enter to all the Questions.	
+You can install all dependencies using the following command:
 
-Exept if it ask you if you want a extra folder to be included, hit no there.
+```bash
+pip install PyAutoGui PyWinCtl numpy
+```
 
-I sorted them so you use the best in my opinion		
+### Virtual Environment (For Linux Recommended)
 
-If you do that it will start the latest Vivecraft version.	
+To avoid installing dependencies globally, it's recommended to use a virtual environment:
 
-You only need to answer answer those questions once,	
+1. Navigate to your project directory:
 
-as long as you dont move the file.	
+```bash
+cd /path/to/your/project
+```
 
-to move the file also move [here script name].txt,	
+2. Create a virtual environment:
 
-if you dont the script will create a new [here script name].txt,	
+```bash
+python3 -m venv venv
+```
 
-and ask you again (questions below).	
+3. Activate the virtual environment:
 
+```bash
+source venv/bin/activate
+```
 
-2.
+### Setup & Usage
 
-If you run it first time it test for a older config file.	
+**First Time Setup:**
 
-The config file name is [here script name].txt 	
+1. Run the script and answer the setup questions. If unsure, just press enter to use the default options.
+2. You'll be asked for a search query (e.g., "vivecraft") to search for a profile. If multiple profiles match, the script will launch the first result.
+3. You only need to answer the setup questions once unless you move the launcher or change settings.
 
-if there is there is a file created in a other version,	
+**Advanced Configuration:**
 
-it will ask you to delete that or stop the script.	
+- If you move the script or change the Minecraft installation, make sure to move the associated configuration file (`minecraft_config.json`).
+- You can edit the `minecraft_config.json` file directly to adjust settings, but manual configuration is optional.
 
-If you want to run that script please click ok to delete it.	
+**Launching:**
 
-If you never had used this Launcher not you wont see that at all.	
+1. After setup, you can rerun the `minecraftautolaucher.py` as often as you like to start minecraft. 
+2. The script will automatically open the Minecraft Launcher and execute the profile matching your query.
 
+### Notes:
 
-3.
-
-If you are a advanced user the first option is for setting up your Minecraft Lanucher location,		
-
-if your Lanucher is installed on Drive "A:\" to "F:\" In "\Program Files" or "\Program Files (x86)",	
-
-it will ask if you want to use that location.	
-
-If you have multiple installations and the on you want to use meets the named criteria,		
-
-just press no until it ask you for the right one then click yes.	
-
-If it doesn't ask you it will show a file selection Just select the Minecraft Lanucher.	
-
-If you want to select a Minecraft Lanucher in a another path click chancel,	
-
-and select the Minecraft Lanucher you want to use.	
-
-
-4.
-
-In the next box type the important part of the profile name.		
-
-For example profile name "vivecraft-1.14.4-jrbudda-4-a0",	
-
-and "vivecraft-1.13.4-jrbudda-3-a0" type "vivecraft",	
-
-it will start the newer or older version based on you next answers.	
-
-If you type the exact name use the name after clicking on the profile,	
-
-and copy the version line after the line "release", "snapshot", "old_beta", or "old_alfa"	
-
-Then it will start this profile,
-
-exept if there are 2 or more profiles that have the same name but have a longer name.		
-
-You can also copy the version name fom the minecraft version folder.	
-
-the easyest way to open this folder is by opining minecraft, the options, texturenpacks,	
-
-clicking on the open texturenpack folder, going one back on the opened File Explorer,	
-
-and double clicking on the version folder.	
-
-
-5.
-
-The next box shows the in Minecraft Lanucher installation sort opition setting,		
-
-its important for the script, it almost only matters,	
-
-if you select oldsort(cancel) in the next option because with that,	
-
-it will just type the name you typed in the last box and sort based on your opion here	
-
-if you use the oldsort(cancel) the setup is finished for you	
-
-
-6.
-
-In the new box it will ask you to sort by name(yes), date(no), or oldsort(cancel).	
-
-I already said something about the oldsort(cancel) option in the last Lineblock.	
-
-the name(yes) option wil sort by name and the date(no) option wil sort by date.		
-
-its based on your next opition if it sorts up or down up means,		
-
--- -- -- --  first to last 1.14.4, 1.13.2, 1.12,	
-	     
-jjjj.mm.dd   first to last 2020.03.10, 2020.03.09, 2020.03.08,	
-
-the down option is from last to first instead.	
-
-
-7.
-
-If you selected name(yes), or date(no) it will ask you for your minecraft version folder,	
-
-as i said it will ask if the the default folder is the correct one.	
-
-if not select the correct one like this.	
-
-type like this "C:\Users\%Username%\AppData\Roaming\.minecraft\versions".	
-
-replace the %Username% with your PC Username,	
-
-or just browse to your Minercraft Version Folder.	
-
-in the newest version it will ask you for more folders.
-
-if you dont want an extra folder to be included hit no.
-
-
-8.
-
-In the next and last box it will ask you to imput how long the programm waits for the Minecraft Lanucher.	
-
-If to short it will click on nothing because the Minecraft Launcher isn't useable jet.
-
-The default (2 Sec) shold work.	
-
-
-9.
-
-Every setting is theoretically editable inside the [here script name].ini.	
-
-If you want you can do it but i won't explain what ist what you can try some stuff,	
-
-or just delete the [here script name].ini file it will give you all questions again.
+- The configuration is stored in a JSON file, which is easy to modify or reset if needed.
