@@ -1,5 +1,3 @@
-### README
-
 # Minecraft Autolauncher – *Vivecraft Autolauncher Rewritten*
 
 Original Vivecraft Autolauncher forked from [a script by Mavi222 here](https://github.com/Mavi222/Vivecraft-autolauncher).
