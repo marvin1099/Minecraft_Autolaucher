@@ -324,12 +324,19 @@ class MinecraftRunner:
 
     def gui_mc_start(self, to_type):
         mc_buttons = {
+            "Play Tab":["250", "60"],
             "Installations Tab":["350", "60"],
             "Search Field":["300","130"],
             "Play Instance":["w-140","260"]
         }
         self.calc.activate()
-        time.sleep(0.3)
+        time.sleep(0.2)
+        if to_type:
+            x, y = self.calc.abs_coords(mc_buttons.get("Play Tab"))
+            pyautogui.moveTo(x, y)
+            pyautogui.click()
+            pyautogui.write(to_type)
+            time.sleep(0.2)
         x, y = self.calc.abs_coords(mc_buttons.get("Installations Tab"))
         pyautogui.moveTo(x, y)
         pyautogui.click()
@@ -338,7 +345,6 @@ class MinecraftRunner:
             x, y = self.calc.abs_coords(mc_buttons.get("Search Field"))
             pyautogui.moveTo(x, y)
             pyautogui.click()
-            pyautogui.hotkey("ctrl", "a")
             pyautogui.write(to_type)
             time.sleep(0.2)
         x, y = self.calc.abs_coords(mc_buttons.get("Play Instance"))
