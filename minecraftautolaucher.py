@@ -91,9 +91,9 @@ class MinecraftLauncherConfig:
         root = Tk()
         root.withdraw()
         if req:
-            launcher_cmd = simpledialog.askstring("Input", "Enter the command to start the Minecraft launcher:",req)
+            launcher_cmd = simpledialog.askstring("Input", "Enter the command to start the Minecraft launcher\n(place ' at the front and end of paths):", "'" + req + "'")
         else:
-            launcher_cmd = simpledialog.askstring("Input", "Enter the command to start the Minecraft launcher:")
+            launcher_cmd = simpledialog.askstring("Input", "Enter the command to start the Minecraft launcher\n(place ' at the front and end of paths):")
 
         if launcher_cmd:
             # Use shlex.split to handle splitting while preserving quoted strings
