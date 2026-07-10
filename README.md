@@ -1,4 +1,15 @@
-# Minecraft_Autolauncher -- *Vivecraft_Autolauncher Rewritten*
+# Minecraft_Autolauncher
+### Vivecraft_Autolauncher Rewritten
+
+> [!NOTE]
+> While this project still works, there is a simpler solution that I didn't know at the time of making this project.  
+> Using [Prism Launcher](https://prismlauncher.org/) (recommended) or [MultiMC](https://multimc.org/) adds the ability to make shortcuts for each profile.  
+> These can be added to your VR interface as well, no GUI interaction needed. Consider just using Prism or MultiMC instead.
+
+### README below.
+
+---
+
 Forked from a script by Mavi222:	  
 https://github.com/Mavi222/Vivecraft-autolauncher  
 
